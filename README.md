@@ -26,8 +26,8 @@ graph TD
 
 ## Key Features
 
-- **Production-Grade Architecture**: Restructured from a monolithic script into a clean, modular Python package (`vc_vetter`).
-- **Structured LLM Outputs**: Replaced fragile regular expressions with LangChain's `PydanticOutputParser` to guarantee structured JSON output from Ollama.
+- **Production-Grade Architecture**: Clean, modular Python package (`vc_vetter`).
+- **Structured LLM Outputs**: Structured JSON output from Ollama.
 - **Efficient Scraper**: A robust crawler class that resolves relative paths, rotates user-agents, strips boilerplate tags (header/footer/nav/scripts), and traverses relevant links in a single pass (maximum 1 request per page).
 - **Parallel Processing**: Uses Python's `ThreadPoolExecutor` to vet multiple VCs concurrently, reusing a single shared ChatOllama instance to prevent local memory overhead.
 - **Professional Log Management**: Directs background crawling and API logs to a dedicated log file (`vc_vetter.log`) to keep the CLI output clean and prevent inter-thread logs from disrupting the progress bar.
